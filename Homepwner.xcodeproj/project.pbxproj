@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		9F204BFC211A65E200678034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F204BFB211A65E200678034 /* AppDelegate.swift */; };
-		9F204BFE211A65E200678034 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F204BFD211A65E200678034 /* ViewController.swift */; };
 		9F204C01211A65E200678034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F204BFF211A65E200678034 /* Main.storyboard */; };
 		9F204C03211A65E300678034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F204C02211A65E300678034 /* Assets.xcassets */; };
 		9F204C06211A65E300678034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F204C04211A65E300678034 /* LaunchScreen.storyboard */; };
 		9F204C11211A65E300678034 /* HomepwnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F204C10211A65E300678034 /* HomepwnerTests.swift */; };
 		9F204C1C211A65E300678034 /* HomepwnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F204C1B211A65E300678034 /* HomepwnerUITests.swift */; };
+		9F204C2A211A66B000678034 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F204C29211A66B000678034 /* ItemsViewController.swift */; };
+		9F204C2C211A681A00678034 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F204C2B211A681A00678034 /* Item.swift */; };
+		9F204C2E211A6A2900678034 /* ItemsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F204C2D211A6A2900678034 /* ItemsStore.swift */; };
+		9F204C30211D04D000678034 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F204C2F211D04D000678034 /* ItemCell.swift */; };
+		9F204C32211E62BE00678034 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F204C31211E62BE00678034 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		9F204BF8211A65E200678034 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F204BFB211A65E200678034 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F204BFD211A65E200678034 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9F204C00211A65E200678034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F204C02211A65E300678034 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F204C05211A65E300678034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		9F204C17211A65E300678034 /* HomepwnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomepwnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F204C1B211A65E300678034 /* HomepwnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepwnerUITests.swift; sourceTree = "<group>"; };
 		9F204C1D211A65E300678034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F204C29211A66B000678034 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		9F204C2B211A681A00678034 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		9F204C2D211A6A2900678034 /* ItemsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsStore.swift; sourceTree = "<group>"; };
+		9F204C2F211D04D000678034 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		9F204C31211E62BE00678034 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				9F204BFB211A65E200678034 /* AppDelegate.swift */,
-				9F204BFD211A65E200678034 /* ViewController.swift */,
+				9F204C29211A66B000678034 /* ItemsViewController.swift */,
+				9F204C2D211A6A2900678034 /* ItemsStore.swift */,
+				9F204C2F211D04D000678034 /* ItemCell.swift */,
+				9F204C31211E62BE00678034 /* DetailViewController.swift */,
+				9F204C2B211A681A00678034 /* Item.swift */,
 				9F204BFF211A65E200678034 /* Main.storyboard */,
 				9F204C02211A65E300678034 /* Assets.xcassets */,
 				9F204C04211A65E300678034 /* LaunchScreen.storyboard */,
@@ -256,8 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F204BFE211A65E200678034 /* ViewController.swift in Sources */,
+				9F204C2A211A66B000678034 /* ItemsViewController.swift in Sources */,
+				9F204C2C211A681A00678034 /* Item.swift in Sources */,
+				9F204C2E211A6A2900678034 /* ItemsStore.swift in Sources */,
+				9F204C32211E62BE00678034 /* DetailViewController.swift in Sources */,
 				9F204BFC211A65E200678034 /* AppDelegate.swift in Sources */,
+				9F204C30211D04D000678034 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F72JLZV5D6;
 				INFOPLIST_FILE = Homepwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,6 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F72JLZV5D6;
 				INFOPLIST_FILE = Homepwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

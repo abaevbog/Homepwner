@@ -14,7 +14,7 @@
         <!--Homepwner-->
         <scene sceneID="tTm-g7-EW9">
             <objects>
-                <tableViewController title="Homepwner" id="wNV-Cr-DL3" customClass="ItemsViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ItemsViewController" title="Homepwner" id="wNV-Cr-DL3" customClass="ItemsViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FYN-or-sp1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,6 +73,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="BLf-Ry-WiL">
                             <connections>
                                 <action selector="addNewItem:" destination="wNV-Cr-DL3" id="5r1-ej-ruA"/>
+                                <segue destination="GsA-jT-yqE" kind="show" identifier="makeItem" id="WiY-Lh-TyK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -213,4 +214,7 @@
             <point key="canvasLocation" x="92" y="89.505247376311857"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WiY-Lh-TyK"/>
+    </inferredMetricsTieBreakers>
 </document>

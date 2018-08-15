@@ -8,20 +8,29 @@
 
 import UIKit
 
-class Item: NSObject {
-    var name: String
-    var valueInDollars: Int
-    var serialNumber: String?
-    let dateCreated: Date
-    
-    init(name:String, serialNumber:String?,valueInDollars: Int) {
-        self.name = name
-        self.valueInDollars = valueInDollars
-        self.serialNumber = serialNumber
-        self.dateCreated = Date()
+    public class Item: NSObject {
+        var name: String?
+        var valueInDollars: Int?
+        var serialNumber: String?
+        let dateCreated: Date
         
-        super.init()
-        
+        init(name:String?, serialNumber:String?,valueInDollars: Int?) {
+            if let nameReal = name,
+                let numberReal = serialNumber,
+                let valueReal = valueInDollars {
+            self.name = nameReal
+            self.valueInDollars = valueReal
+            self.serialNumber = numberReal
+            } else {
+               self.name = nil
+                self.valueInDollars = nil
+                self.serialNumber = nil
+                
+            }
+            self.dateCreated = Date()
+            
+            super.init()
+            
+        }
     }
-}
 

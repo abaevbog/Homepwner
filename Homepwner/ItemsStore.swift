@@ -16,6 +16,12 @@ class ItemStore {
         allItems.append(newItem)
         return newItem
     }
+    
+    @discardableResult func createItemMine(myName: String, mySerialNumber: String, myValueInDollars: Int) -> Item {
+        let newItem = Item(name: myName, serialNumber: mySerialNumber, valueInDollars: myValueInDollars)
+        allItems.append(newItem)
+        return newItem
+    }
         
     init() {
         for _ in 0..<5 {

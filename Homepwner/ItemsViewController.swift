@@ -9,7 +9,7 @@
 import UIKit
 
 class ItemsViewController: UITableViewController {
-    
+/*
     @IBAction func addNewItem(_ sender: UIBarButtonItem) {
         let newItem = itemStore.createItem()
         
@@ -18,7 +18,7 @@ class ItemsViewController: UITableViewController {
             tableView.insertRows(at: [indexPath], with: .automatic)
         }
     }
-
+*/
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
@@ -82,9 +82,17 @@ class ItemsViewController: UITableViewController {
         case "showItem"?:
             if let row = tableView.indexPathForSelectedRow?.row {
                 let item = itemStore.allItems[row]
+                print("Showing item:", item.name!)
                 let detailViewController = segue.destination as! DetailViewController
                 detailViewController.item = item
             }
+        case "makeItem"?:
+            print("KUKU!")
+            let detailViewController = segue.destination as! DetailViewController
+            let emptyItem = Item(name: nil,serialNumber: nil,valueInDollars: nil)
+            print("empty item ",emptyItem.name)
+            detailViewController.item = emptyItem
+            detailViewController.itemStore = itemStore
         default:
             preconditionFailure("Unexpected segue identifier")
         }

@@ -19,6 +19,16 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         } else {
             imagePicker.sourceType = .photoLibrary
         }
+        imagePicker.delegate = self
+        
+        present(imagePicker, animated:true, completion: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        imageStore.setImage(image, forKey: item.itemKey)
+        imageView.image = image
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -33,6 +43,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
             navigationItem.title = item.name
         }
     }
+    var imageStore: ImageStore!
 
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -56,6 +67,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         serialField.text = item.serialNumber
         valueField.text = numberFormatter.string(from: NSNumber(value: item.valueInDollars))
         dateField.text = dateFormatter.string(from: item.dateCreated)
+        
+        let key = item.itemKey
+        let imageToDisplay = imageStore.image(forKey: key)
+        imageView.image = imageToDisplay
     }
         
         
